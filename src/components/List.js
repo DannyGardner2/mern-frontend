@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 
 const List = () => {
-    
+
     const url = "http://localhost:8000"
     const [user, setUser] = useState([])
     useEffect(() => {
@@ -16,7 +16,7 @@ const List = () => {
         axios.delete(`http://localhost:8000/api/users/${id}`)
     }
     const updateUser = () => {
-        const test = { _id: "61fc8e790b58ff33e8027856", name: "test2"}
+        const test = { _id: "61fc8e790b58ff33e8027856", name: "test2" }
         axios.put(`http://localhost:8000/api/users/61fc8e790b58ff33e8027856`, test)
     }
     updateUser()
@@ -26,9 +26,9 @@ const List = () => {
             {user.map(item => {
                 return (
                     <div>
-                        <h1>{item.name}</h1>
-                        <h2>{item.age}</h2>
-                        <h4>{item._id}</h4>
+                        <h1>Name: {item.name}</h1>
+                        <h2>Age: {item.age}</h2>
+                        <h4>Id: {item._id}</h4>
                         <button onClick={() => handleClick(item._id)} className='btn btn-lg btn-info'>delete</button>
                     </div>
                 )
