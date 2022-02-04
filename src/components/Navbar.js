@@ -20,6 +20,11 @@ function Navbar() {
                         Add User
                     </NavLink>
                 </NavItem>
+                <NavItem>
+                    <NavLink href="/edituser/">
+                        Edit User
+                    </NavLink>
+                </NavItem>
             </Nav>
         </Container>
     )

@@ -15,6 +15,11 @@ const List = () => {
     const handleClick = (id) => {
         axios.delete(`http://localhost:8000/api/users/${id}`)
     }
+    const updateUser = () => {
+        const test = { _id: "61fc8e790b58ff33e8027856", name: "test2"}
+        axios.put(`http://localhost:8000/api/users/61fc8e790b58ff33e8027856`, test)
+    }
+    updateUser()
 
     return (
         <div>

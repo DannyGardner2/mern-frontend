@@ -5,6 +5,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Adduser from './components/Adduser';
+import Edituser from './components/Edituser';
 
 function App() {
   return (
@@ -14,7 +15,11 @@ function App() {
         <Route path="/"/>
         <Route path="/users" element={<List />} />
         <Route path="/adduser" element={<Adduser />} />
+        <Route path="/edituser" element={<Edituser />} />
       </Routes>
+      <div>
+        <h1>Sorry our site sucks</h1>
+      </div>
     </div>
   );
 }
